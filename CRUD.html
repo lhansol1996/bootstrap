@@ -4,236 +4,282 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bootstrap demo</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
-	<style>
-		.sidebar{
-			background-color: black;
-		}
+<script src="https://kit.fontawesome.com/9a26dd7f83.js"
+	crossorigin="anonymous"></script>
 
-		.bottom-border{
-			border-bottom: 2px solid white;
-		}
+<link rel="stylesheet"
+	href="/xdm/v1/css/datetimepicker/jquery.datetimepicker.min.css" />
+<script
+	src="/xdm/v1/jquery/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
 
 
+<style>
+.sidebar {
+	background-color: black;
+}
 
-	</style>
+.bottom-border {
+	border-bottom: 2px solid white;
+}
+</style>
+
+<script type="text/javascript">
+	$(function() {
+		$(".datetimepicker").datetimepicker({
+			format : "Y-m-d H:i",
+		});
+	});
+	
+	window.addEventListener('load', function() {
+		$("#shDateStart, #shDateEnd").datetimepicker({
+			
+ 			format: 'Y-m-d H:i'
+		});
+	});
+</script>
+
+
 
 </head>
 
 <body>
-<main>
-	<!--전체 컨테이너-->
-<div class="container-fluid p-0">	
-	<!--상단 바-->
-	<nav class="navbar navbar-light bg-light fixed-top position-relative">
-		<div class="container-fluid">
-			<span class="navbar-brand mb-0 h1">Admin</span>
-			<div>
-				<button class="navbar-toggler" type="button" 
-						data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
-						aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+	<main>
+		<!--전체 컨테이너-->
+		<div class="container-fluid p-0">
+			<!--상단 바-->
+			<nav class="navbar navbar-light bg-light fixed-top position-relative">
+				<div class="container-fluid">
+					<span class="navbar-brand mb-0 h1">Admin</span>
+					<div>
+						<button class="navbar-toggler" type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarToggleExternalContent"
+							aria-controls="navbarToggleExternalContent" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<img src="images/user_image.png" alt="img" width="30" height="24"
+							class="d-inline-block align-text-top">
+					</div>
+				</div>
+			</nav>
+			<!-- 상단 바 끝-->
+			<!--nav bar 선언 사이드바 / 본문 -->
+			<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+				<button class="navbar-toggler ml-auto mb-2 bg-light" type="button"
+					data-toggle="collapse" data-target="#sidebar">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<img src="images/user_image.png" alt="img" width="30" height="24" class="d-inline-block align-text-top">
-			</div>
-		</div>
-	</nav>
-	<!-- 상단 바 끝-->
-	<!--nav bar 선언 사이드바 / 본문 -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary" >
-		<button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#sidebar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="sidebar">
-			<div class="container-fluid">
-				<div class="row">
-					<!--사이드바-->
-					<div class="col-lg-2 sidebar p-0 text-center">
-						<a href="#" class="navbar-brand text-white text-center d-block mx-auto py-3 bottom-border">Home</a>
-						<ul class="navbar-nav flex-column mt-4">
-							<li class="nav-item">
-								<a href="#" class="nav-link text-white p-3 sidebar-link">
-									<i class="text-white mr-3"></i>이게뭐임
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link text-white p-3 sidebar-link">
-									<i class="text-white mr-3"></i>이게뭐임2
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link text-white p-3 sidebar-link">
-									<i class="text-white mr-3"></i>이게뭐임3
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link text-white p-3 sidebar-link">
-									<i class="text-white mr-3"></i>이게뭐임4
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link text-white p-3 sidebar-link">
-									<i class="text-white mr-3"></i>이게뭐임5
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link text-white p-3 sidebar-link">
-									<i class="text-white mr-3"></i>이게뭐임6
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link text-white p-3 sidebar-link">
-									<i class="text-white mr-3"></i>이게뭐임7
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link text-white p-3 sidebar-link">
-									<i class="text-white mr-3"></i>이게뭐임8
-								</a>
-							</li>
-							
-							
-
-
-						</ul>	
-				
+				<div class="collapse navbar-collapse" id="sidebar">
+					<div class="container-fluid">
 						<div class="row">
-							<div class="col position-sticky fixed-bottom">
-								<a href="#">나가기 버튼</a>
+							<!--사이드바-->
+							<div class="col-lg-2 sidebar p-0 text-center">
+								<a href="#"
+									class="navbar-brand text-white text-center d-block mx-auto py-3 bottom-border">Home</a>
+								<ul class="navbar-nav flex-column mt-4">
+									<li class="nav-item"><a href="#"
+										class="nav-link text-white p-3 sidebar-link"> <i
+											class="text-white mr-3"></i>이게뭐임
+									</a></li>
+									<li class="nav-item"><a href="#"
+										class="nav-link text-white p-3 sidebar-link"> <i
+											class="text-white mr-3"></i>이게뭐임2
+									</a></li>
+									<li class="nav-item"><a href="#"
+										class="nav-link text-white p-3 sidebar-link"> <i
+											class="text-white mr-3"></i>이게뭐임3
+									</a></li>
+									<li class="nav-item"><a href="#"
+										class="nav-link text-white p-3 sidebar-link"> <i
+											class="text-white mr-3"></i>이게뭐임4
+									</a></li>
+									<li class="nav-item"><a href="#"
+										class="nav-link text-white p-3 sidebar-link"> <i
+											class="text-white mr-3"></i>이게뭐임5
+									</a></li>
+									<li class="nav-item"><a href="#"
+										class="nav-link text-white p-3 sidebar-link"> <i
+											class="text-white mr-3"></i>이게뭐임6
+									</a></li>
+									<li class="nav-item"><a href="#"
+										class="nav-link text-white p-3 sidebar-link"> <i
+											class="text-white mr-3"></i>이게뭐임7
+									</a></li>
+									<li class="nav-item"><a href="#"
+										class="nav-link text-white p-3 sidebar-link"> <i
+											class="text-white mr-3"></i>이게뭐임8
+									</a></li>
+
+
+
+
+								</ul>
+
+								<div class="row">
+									<div class="col position-sticky fixed-bottom">
+										<a href="#">나가기 버튼</a>
+									</div>
+								</div>
+
+
 							</div>
-						</div>
+							<!--사이드바 끝-->
 
+							<!--본문 바-->
 
-					</div>
-				<!--사이드바 끝-->
-
-				<!--본문 바-->
-					
-						<div class="col-lg-10 p-0" style="background-color: white;">
-							<div class="container-fluid pb-5 pt-2" style="border-bottom: solid 1px; border-top:solid 1px; background-color: rgb(223, 223, 223) ;">
-								<div class="row">
-									<div class="col-4">
-										<nav style="--bs-breadcrumb-divider: '>';">
-											<ol class="breadcrumb">
-												<li class="breadcrumb-item"><a href="#">page1</a></li>
-												<li class="breadcrumb-item"><a href="#">page2</a></li>
-												<li class="breadcrumb-item active" aria-current="page">회원관리</li>
-											</ol>
-										</nav>
-									</div>
-								</div>
-
-								<!--select 메뉴들-->
-								<div class="row p-0">
-									<div class="col-12 p-0">
-										<p class="ms-5 fw-bold fs-2" >Member</p>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-2 ms-5">
-										<select class="form-select" aria-label="Default select example">
-											<option selected>Open this select menu</option>
-											<option value="1">One</option>
-											<option value="2">Two</option>
-											<option value="3">Three</option>
-										</select>
-									</div>
-									<div class="col-2">
-										<select class="form-select" aria-label="Default select example">
-											<option selected>Open this select menu</option>
-											<option value="1">One</option>
-											<option value="2">Two</option>
-											<option value="3">Three</option>
-										</select>
-									</div>
-									<div class="col-2">
-										<div class="input-group input-group">
-											<input type="text" class="form-control" placeholder="2024-01-01">
-										</div>
-									</div>
-									<div class="col-2">
-										<div class="input-group input-group">
-											<input type="text" class="form-control" placeholder="2024-01-01">
-										</div>
-									</div>
-								</div>
-
-								<!--검색 구분-->
-								<div class="row mt-5">
-									<div class="col-2 ms-5">
-										<select class="form-select" aria-label="Default select example">
-											<option selected>검색 구분</option>
-											<option value="1">One</option>
-											<option value="2">Two</option>
-											<option value="3">Three</option>
-										</select>
-									</div>
-
-									<div class="col-2">
-										<div class="input-group input-group">
-											<input type="text" class="form-control" placeholder="검색어">
+							<div class="col-lg-10 p-0" style="background-color: white;">
+								<div class="container-fluid pb-5 pt-2"
+									style="border-bottom: solid 1px; border-top: solid 1px; background-color: rgb(223, 223, 223);">
+									<div class="row">
+										<div class="col-4">
+											<nav style="--bs-breadcrumb-divider: '>';">
+												<ol class="breadcrumb">
+													<li class="breadcrumb-item"><a href="#">page1</a></li>
+													<li class="breadcrumb-item"><a href="#">page2</a></li>
+													<li class="breadcrumb-item active" aria-current="page">회원관리</li>
+												</ol>
+											</nav>
 										</div>
 									</div>
 
-									<div class="col-2">
-										<div>
-											<button type="button" style="border-radius: 20%;">
-												<img src="images/search.png" alt="img" width="30" height="30" class="d-inline-block align-text-top">
-											</button>
+									<!--select 메뉴들-->
+									<div class="row p-0">
+										<div class="col-12 p-0">
+											<p class="ms-5 fw-bold fs-2">Member</p>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-2 ms-5">
+											<select class="form-select"
+												aria-label="Default select example">
+												<option selected>Open this select menu</option>
+												<option value="1">One</option>
+												<option value="2">Two</option>
+												<option value="3">Three</option>
+											</select>
+										</div>
+										<div class="col-2">
+											<select class="form-select"
+												aria-label="Default select example">
+												<option selected>Open this select menu</option>
+												<option value="1">One</option>
+												<option value="2">Two</option>
+												<option value="3">Three</option>
+											</select>
+										</div>
+
+										<div class="col-2">
+											<div class="input-group input-group">
+												<input type="datetime-local" id="datetime"
+													max="2100-06-20T21:00" min="2000-06-05T12:30"
+													value="2024-06-15T13:27">
+											</div>
+										</div>
+
+										<div class="col-2">
+											<input type='text' class='datetimepicker' name='start_dt'  style='width:140px;'>
 											
-											<button type="button" style="border-radius: 20%;" class="ms-2">
-												<img src="images/refresh.png" alt="img" width="30" height="30" class="d-inline-block align-text-top">
-											</button>
+										</div>
+										<div class="col-2">
+											<input type="text" id="shDateStart" name="shDateStart"
+												placeholder="시작일" class="form-control form-control-sm"
+												autocomplete="off" readonly>
+
+										</div>
+										
+									</div>
+
+									<!--검색 구분-->
+									<div class="row mt-5">
+										<div class="col-2 ms-5">
+											<select class="form-select"
+												aria-label="Default select example">
+												<option selected>검색 구분</option>
+												<option value="1">One</option>
+												<option value="2">Two</option>
+												<option value="3">Three</option>
+											</select>
+										</div>
+
+										<div class="col-2">
+											<div class="input-group input-group">
+												<input type="text" class="form-control" placeholder="검색어">
+											</div>
+										</div>
+
+										<div class="col-2">
+											<div>
+												<button type="button" style="border-radius: 20%;">
+													<img src="images/search.png" alt="img" width="30"
+														height="30" class="d-inline-block align-text-top">
+												</button>
+
+												<button type="button" style="border-radius: 20%;"
+													class="ms-2">
+													<img src="images/refresh.png" alt="img" width="30"
+														height="30" class="d-inline-block align-text-top">
+												</button>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<!--총합-->
-							<div class="container-fluid">
-								<div class="row mt-2 p-2">
-									<div class="col-8">
-										<p class="mb-0 fw-bold">Total : </p>
-									</div>
-									
-									<div class="col-4">
-										<select class="form-select" aria-label="Default select example">
-											<option selected>10</option>
-											<option value="1">5</option>
-											<option value="2">15</option>
-											<option value="3">20</option>
-										</select>
-									</div>
+								<!--총합-->
+								<div class="container-fluid">
+									<div class="row mt-2 p-2">
+										<div class="col-8">
+											<p class="mb-0 fw-bold">Total :</p>
+										</div>
+
+										<div class="col-4">
+											<select class="form-select"
+												aria-label="Default select example">
+												<option selected>10</option>
+												<option value="1">5</option>
+												<option value="2">15</option>
+												<option value="3">20</option>
+											</select>
+										</div>
 
 
-								</div>
-								<!--테이블 시작-->
-								<div class="row">
-									
+									</div>
+									<!--테이블 시작-->
+									<div class="row">
+
 										<div class="col-12">
 											<table class="table">
 												<thead>
 													<tr>
-													<th scope="col">
-														<div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-															<label class="form-check-label" for="flexCheckDefault"></label>
-														</div>
-													</th>
-													<th scope="col">#</th>
-													<th scope="col">탈퇴</th>
-													<th scope="col">코드</th>
-													<th scope="col">이름</th>
-													<th scope="col">아이디</th>
-													<th scope="col">성별</th>
-													<th scope="col">생일</th>
-													<th scope="col">이메일</th>
-													<th scope="col">모바일</th>
-													<th scope="col">예금주</th>
-													<th scope="col">은행</th>
+														<th scope="col">
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault"> <label
+																	class="form-check-label" for="flexCheckDefault"></label>
+															</div>
+														</th>
+														<th scope="col">#</th>
+														<th scope="col">탈퇴</th>
+														<th scope="col">코드</th>
+														<th scope="col">이름</th>
+														<th scope="col">아이디</th>
+														<th scope="col">성별</th>
+														<th scope="col">생일</th>
+														<th scope="col">이메일</th>
+														<th scope="col">모바일</th>
+														<th scope="col">예금주</th>
+														<th scope="col">은행</th>
 													</tr>
 												</thead>
 												<!--더미데이터-->
@@ -241,8 +287,9 @@
 													<tr>
 														<th scope="row">
 															<div class="form-check">
-																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-																<label class="form-check-label" for="flexCheckDefault"></label>
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault"> <label
+																	class="form-check-label" for="flexCheckDefault"></label>
 															</div>
 														</th>
 														<th>1</th>
@@ -262,8 +309,9 @@
 													<tr>
 														<th scope="row">
 															<div class="form-check">
-																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-																<label class="form-check-label" for="flexCheckDefault"></label>
+																<input class="form-check-input" type="checkbox" value=""
+																	id="flexCheckDefault"> <label
+																	class="form-check-label" for="flexCheckDefault"></label>
 															</div>
 														</th>
 														<th>2</th>
@@ -280,39 +328,37 @@
 													</tr>
 												</tbody>
 
-											<!--더미데이터끝-->
+												<!--더미데이터끝-->
 											</table>
 										</div>
 									</div>
-								<!--테이블 끝-->	
+									<!--테이블 끝-->
+								</div>
+								<div class="row">
+									<nav aria-label="Page navigation example">
+										<ul class="pagination justify-content-center align-bottom">
+											<li class="page-item disabled"><a class="page-link">Previous</a>
+											</li>
+											<li class="page-item"><a class="page-link" href="#">1</a></li>
+											<li class="page-item"><a class="page-link" href="#">2</a></li>
+											<li class="page-item"><a class="page-link" href="#">3</a></li>
+											<li class="page-item"><a class="page-link" href="#">Next</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
 							</div>
-							<div class="row">
-								<nav aria-label="Page navigation example">
-									<ul class="pagination justify-content-center align-bottom">
-										<li class="page-item disabled">
-											<a class="page-link">Previous</a>
-										</li>
-										<li class="page-item"><a class="page-link" href="#">1</a></li>
-										<li class="page-item"><a class="page-link" href="#">2</a></li>
-										<li class="page-item"><a class="page-link" href="#">3</a></li>
-										<li class="page-item">
-											<a class="page-link" href="#">Next</a>
-									</li>
-									</ul>
-								</nav>
-							</div>
-						</div>							
-				<!--본문 바 끝-->
+							<!--본문 바 끝-->
+						</div>
+					</div>
 				</div>
-			</div>
+			</nav>
+			<!--nav bar 끝-->
+
+
+
 		</div>
-	</nav>
-	<!--nav bar 끝-->
-	
-	
-	
-</div>	
-</main>
+	</main>
 
 
 
@@ -320,6 +366,8 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous">
+		
 	</script>
 </body>
+
 </html>
